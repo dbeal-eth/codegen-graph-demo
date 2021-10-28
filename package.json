@@ -1,0 +1,21 @@
+{
+  "name": "codegen-graph-demo",
+  "version": "1.0.0",
+  "description": "Minimalist example repo for usage of codegen-graph-ts",
+  "main": "index.js",
+  "scripts": {
+    "pull": "codegen-graph-ts pull https://api.thegraph.com/subgraphs/name/killerbyte/synthetix-global-debt > subgraphs/global-debt.json",
+    "codegen": "codegen-graph-ts gen -s subgraphs/global-debt.json -o generated/global-debt.ts",
+    "start": "ts-node demo.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daniel Beal <git@danb.email>",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node": "^10.3.0",
+    "typescript": "^4.4.4"
+  },
+  "dependencies": {
+    "codegen-graph-ts": "^0.0.17"
+  }
+}
