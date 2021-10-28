@@ -7,7 +7,7 @@ const run = async () => {
         { timestamp: true, debtEntry: true, debtRatio: true }
     );
 
-    console.log(result.length);
+    console.log('results count:', result.length);
 
     for(const r of result.slice(result.length / 2, result.length / 2 + 10)) {
         console.log('got data:', new Date(r.timestamp.mul(1000).toNumber()).toISOString(), r.debtEntry.toString(2));
